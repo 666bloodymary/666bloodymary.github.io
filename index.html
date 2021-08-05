@@ -18,12 +18,49 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 
     <script type="text/javascript" src="js/pace.min.js"></script>
+	
+	
+	
+	
+	
+	
 	<script>
-      function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-    </script>
+	function spook(){
+		if(document.cookie.includes("spooked") === false){
+			setTimeout(function(){
+				var audio = new Audio('//sandcp.github.io/124955__thegoliath__panicscare.wav');
+				
+				audio.play();
+				document.cookie = "spooked=true";
+				document.getElementById("spookyfx").style.display = "block";
+				document.getElementById("spookyfx").onclick = function(){
+					document.getElementById("spookyfx").style.display = "none";
+				};
+			},(Math.random()*(6000-3000)+3000));
+		}
+	}
+	spook();
+</script>
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 
@@ -42,11 +79,11 @@
 
     <div class="wrapper" >
       <div id="big-text" class="wow bounceInDown" data-wow-delay="4s">
-        <h1>DARNA MANA <br> HAI !</h1>
+        <h1>We all float down here,<br> you'll float too. </h1>
         <p>
-The weak shall not enter ! 
+		Not for the faint of heart.
         </p>
-        <a class="le-btn" href="#" >Enter (zoom link )</a>
+        <a class="le-btn" href="https://zoom.us/j/98533965985?pwd=cEZHY05yUDJUaVdhZTdrWC84dnRFUT09" >Enter (zoom link)</a>
       </div>
       
       <div id="texture" class="bg-image"  data-bg-image="images/texture.png" ></div>
@@ -54,13 +91,16 @@ The weak shall not enter !
       <div id="hole" class="wow bounceInUp" data-wow-delay="3s"></div>
        <div id="moon" class="wow bounceInUp" data-wow-delay="2s"></div>
       <div id="hand" class="wow bounceInUp" data-wow-delay="3.5s">
-        <div class="text" onclick="play()">
-          Click here to<br>
-          to lift the CURSE !</div>
+        <a class="text" href="https://drive.google.com/file/d/1pLA2ZUhEcEtzZADSsAzCGslebYVI5rWV/view?usp=sharing" target="_blank">
+          Play <br>
+		  ME ! <br>
+		  <img src="https://img.icons8.com/material-sharp/24/000000/play--v1.png"/>
+           </a>
       </div>
-	  <audio id="audio" src="music\m.mp3"></audio>
-	  
 	 
+	  
+	  
+	 <div id="spookyfx"></div>
 	  
 	
 	   
